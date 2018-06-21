@@ -1,0 +1,21 @@
+
+
+Java supports single-thread as well as multi-thread operations. A single-thread program has a single entry point (the main() method) and a 
+single exit point. A multi-thread program has an initial entry point (the main() method), followed by many entry and exit points, which are run concurrently with the main(). The term "concurrency" refers to doing multiple tasks at the same time.
+
+Java has built-in support for concurrent programming by running multiple threads concurrently within a single program. A thread, also called a lightweight process, is a single sequential flow of programming operations, with a definite beginning and an end. During the lifetime of the thread, there is only a single point of execution. 
+A thread by itself is not a program because it cannot run on its own. Instead, it runs within a program.
+
+Multithreading
+-------------
+
+Java Uses multiple threads to to run multiple tasks concurrently.
+2 or more lines of code will run at the same time.
+
+Threads, unlike heavyweight process, are lightweight and run inside a single process – they share the same address space, the resources allocated 
+and the environment of that process. It is lightweight because it runs within the context of a heavyweight process and takes advantage of the resources allocated for that program and the program’s environment. A thread must carve out its own resources within the running process. For example, a thread has its own stack, registers and program counter.
+The code running within the thread works only within that context, hence, a thread (of a sequential flow of operations) is also called an execution context.
+
+Use Sleep inside try catch
+
+Synchronozation - when two threads access the same data

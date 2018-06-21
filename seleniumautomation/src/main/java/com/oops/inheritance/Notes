@@ -1,0 +1,122 @@
+Inheritance
+------------
+Inheritance is the mechanism by which an object acquires the some/all properties of another object.
+
+Type of Inheritance
+-------------------
+1. Single 
+2. Multiple
+3. Multi level
+4. Hierarchical Inheritance
+5. Hybrid Inheritance ( Single + Multiple )
+
+Additional notes
+------------------
+The class whose properties and functionalities are used(inherited) by another class is known as parent class, super class or Base class.
+
+Inheritance is a process of defining a new class based on an existing class by extending its common data members and methods.
+Inheritance allows us to reuse of code, it improves reusability in your java application.
+Note: The biggest advantage of Inheritance is that the code that is already present in base class need not be rewritten in the child class.
+
+This means that the data members(instance variables) and methods of the parent class can be used in the child class as.
+
+Polymorphism
+--------------
+The word ‘polymorphism’ literally means ‘a state of having many shapes’ or ‘the capacity to take on different forms’. 
+When applied to object oriented programming languages like Java, it describes a language’s ability to process objects of various types and 
+classes through a single, uniform interface.
+
+Polymorphism in Java has two types: Compile time polymorphism (static binding) and Runtime polymorphism (dynamic binding). 
+Method overloading is an example of static polymorphism, while method overriding is an example of dynamic polymorphism.
+
+sample example Method Overloading:
+----------------------------------
+
+class DemoOverload{
+
+    public int add(int x, int y){  //method 1
+
+    return x+y;
+
+    }
+
+    public int add(int x, int y, int z){ //method 2
+
+    return x+y+z;
+
+    }
+
+    public int add(double x, int y){ //method 3
+
+    return (int)x+y;
+
+    }
+
+    public int add(int x, double y){ //method 4
+
+    return x+(int)y;
+
+    }
+
+}
+
+class Test{
+
+    public static void main(String[] args){
+
+    DemoOverload demo=new DemoOverload();
+
+    System.out.println(demo.add(2,3));      //method 1 called
+
+    System.out.println(demo.add(2,3,4));    //method 2 called
+
+    System.out.println(demo.add(2,3.4));    //method 4 called
+
+    System.out.println(demo.add(2.5,3));    //method 3 called
+
+    }
+
+}
+
+Method Overriding
+-----------------
+class Vehicle{
+
+    public void move(){
+
+    System.out.println(“Vehicles can move!!”);
+
+    }
+
+}
+
+class MotorBike extends Vehicle{
+
+    public void move(){
+
+    System.out.println(“MotorBike can move and accelerate too!!”);
+
+    }
+
+}
+
+class Test{
+
+    public static void main(String[] args){
+
+    Vehicle vh=new MotorBike(); << upcasting>>
+
+    vh.move();    // prints MotorBike can move and accelerate too!!
+
+    vh=new Vehicle();
+
+    vh.move();    // prints Vehicles can move!!
+
+    }
+
+}
+
+Overloading 
+
+same method name ( arg type diff)
+

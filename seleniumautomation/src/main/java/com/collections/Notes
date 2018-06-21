@@ -1,0 +1,59 @@
+COLLECTIONS - Managing group of Objects
+
+Array List  - Dynamic array - No need to declare its Size - Duplicate elements are allowed 
+
+LinkedList
+---------- It is a collection class that implements List, Deque and Queue Interfaces.
+Queue stores and removes its elements based on a first-in, first-out(FIFO) principle. 
+As, LinkedList implements Deque interface, so LinkedList can be used to represent a first-in, 
+first-out(FIFO) Queue.
+Deque is a double-ended queue i.e. first-in, first-out(FIFO)
+or last-in, first-out(LIFO) principle.
+As LinkedList class implements Deque interface, 
+so LinkedList can also be used to depict a Deque or even a Stack(LIFO).
+
+Array [2] = { 0,1}
+Hash Set
+--------
+Duplicate elements are NOT allowed to be stored in a HashSet.
+The order of elements in a HashSet may appear jumbled in the output.
+Execution time for adding/removing element remains constant, irrespective of the size of HashSet.
+HashSet class doesn't provide any way to access its element by its index.
+HashSet class is not synchronized and hence not thread-safe by default.
+
+LinkedHashSet
+------------
+Duplicate elements are NOT allowed to be stored in a HashSet.
+The order in which elements are stored is the order in which they were inserted in the LinkedHashSet.
+LinkedHashSet class doesn't provide any way to access its element by its index, as provided by ArrayList, LinkedList etc
+
+TreeSetClass
+-------------
+Duplicate elements are NOT allowed to be stored in a TreeSet.
+Ascending ordering of elements in a TreeSet can be changed by providing a custom Comparator to the constructor of TreeSet.
+TreeSet is a good candidate in a situation where we need to retrieve element based on the closest match to a given value(for more on this, see the example section of this article).
+TreeSet class is not synchoronized and hence it is not thread-safe by default.
+
+
+we can have two options to transfer bulk objects in between method calls; either as arguments or return values.
+
+By Java array (Ex. Employee employees[] =…)
+By Java Collection object (Ex. ArrayList employees = … )
+
+ Consider a use case where you need to store key-value pair where keys alone will be sorted for UI display.
+ We can use HaspMap to store key-value pair and keys can be accessed by keySet() method.
+ 
+ 
+ MAPS
+ ------
+Map is an object which is used to store data in the form of key-value pairs, where key and value are objects.
+Each key can be used to extract a value linked with it i.e. if you know the key, you can retrieve the value with it.
+Each key-value pair may also referred to as a map entry.
+A Map object is a type of class which has implemented Map interface. 
+
+1)Each key must be unique i.e. no duplicate keys are allowed in classes that implement Map interface.
+2)In some Map classes, null keys and null values are allowed, while in some it's not.
+3)Unlike collection classes, Map classes don't implement Iterable interface, hence you can't iterate over its entries by
+ simply using for-each loop, nor does it have an iterator() method.
+4)In order to iterate over each element in a Map, we need to use its method entrySet() which gives us a Set(collection class)-view of a 
+map & thereby we can access each element of a Map in a for-each loop.
