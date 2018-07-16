@@ -18,12 +18,12 @@ import org.testng.annotations.BeforeMethod;
  */
 public class BaseTest {
 	
-	protected WebDriver driver;
-	protected WebDriverWait wait;
+	public WebDriver driver;
+	public WebDriverWait wait;
 	
 
 	@BeforeMethod
-	protected void methodSetUp() {
+	public void methodSetUp() {
 		System.out.println("Method set up");
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\n0217055\\Documents\\Drivers\\chromedriver.exe");
 		driver = new ChromeDriver();
@@ -31,7 +31,7 @@ public class BaseTest {
 	}
 
 	@AfterMethod
-	protected void methodTearDown() {
+	public void methodTearDown() {
 		System.out.println("Method tear down");
 		driver.quit();
 	}
