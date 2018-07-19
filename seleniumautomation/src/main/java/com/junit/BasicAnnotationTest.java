@@ -67,6 +67,7 @@ public class BasicAnnotationTest {
     		assertFalse(list.isEmpty());
     		assertEquals(1, list.size());
     		
+    		
     }
 
     @Test

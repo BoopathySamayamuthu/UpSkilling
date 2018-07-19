@@ -33,5 +33,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/n0217055/Workspaces/CI Eclipse 452 Standard/seleniumautomation/jconn4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/n0217055/Documents/jar_files.zip"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

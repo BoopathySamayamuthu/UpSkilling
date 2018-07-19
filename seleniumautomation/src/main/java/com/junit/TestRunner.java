@@ -9,6 +9,8 @@ package com.junit;
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
+import org.junit.Assert;
+
 
 /**
  * @author n0217055
@@ -26,8 +28,14 @@ public class TestRunner {
 		for (Failure failure : result.getFailures()){
 			System.out.println(failure.toString());
 			System.out.println(result.getFailureCount());
+			
 		}
 		System.out.println("Result=="+result.wasSuccessful());
+	}
+	
+	public void sampleMethod(){
+		
+		
 	}
 
 }
